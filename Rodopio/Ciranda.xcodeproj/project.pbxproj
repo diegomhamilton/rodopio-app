@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F8954BC768A62A675B6309A /* App/NearbyTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38420BAFD5EC4815C279A430 /* App/NearbyTransport.swift */; };
+		22292E838714C0C2CA32C6F0 /* App/SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA77780FD0A899FF6FE283 /* App/SessionModel.swift */; };
+		271E7DF07223456E5BAA7343 /* App/NetworkLANTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68A2BF96EFD8EEB49BFB04 /* App/NetworkLANTransport.swift */; };
+		2E6390C046EC5BFE568F6D86 /* Tests/TransportMetricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188CB070CF48D86F1784746E /* Tests/TransportMetricsTests.swift */; };
+		3208B6585F1CC7842488E70D /* App/RecordingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC06C96989AD75F126C7445 /* App/RecordingPanel.swift */; };
+		3F61228DF9AB938AB738ED2D /* App/Rodopio.icon in Resources */ = {isa = PBXBuildFile; fileRef = ACECE635E338F9F4503A365D /* App/Rodopio.icon */; };
+		42B38D92D65B9FED8753C3E2 /* App/Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18F541CA8BEFB642B478D44 /* App/Models.swift */; };
+		464E75F6D2E4B22ADC516462 /* Tests/AuthorityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6DB84F1507A0ECC8876EDA /* Tests/AuthorityTests.swift */; };
+		4BA36A1DACB181B00AF3E8CE /* Core/AudioStreamCore.c in Sources */ = {isa = PBXBuildFile; fileRef = DE9BF432BCFC5C14CE185F3E /* Core/AudioStreamCore.c */; };
+		6AD999589DCEE4B14B38B95F /* App/AudioStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97769830019D9502A81BB20F /* App/AudioStreaming.swift */; };
+		72095B70885731519371DBC0 /* Tests/AudioStreamingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432B190D342BF7E9ECF99A06 /* Tests/AudioStreamingTests.swift */; };
+		76D097F395EFFB8304637783 /* App/ScoreHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3389706ACCF0EA6B00CB1DC /* App/ScoreHistoryView.swift */; };
+		8B0A065C2B9D42C5F0F83855 /* App/LiveInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939B61B2A3393576E3A84DF6 /* App/LiveInput.swift */; };
+		8B5E905F0E0FAD7AE98775DB /* App/ScoreHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009E4CFE03812E461624CBBB /* App/ScoreHistory.swift */; };
+		8B857CB2F58FF21B43E7D7B0 /* App/TransportMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CA319A719F4D5FEE593A21 /* App/TransportMetrics.swift */; };
+		A12BAAF3D900964A933435B8 /* Core/RouteTransition.c in Sources */ = {isa = PBXBuildFile; fileRef = 768AA1CE2A100C6514B81C85 /* Core/RouteTransition.c */; };
+		A548D5A31B99873D35DD64B0 /* App/RecordingExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4901F001334C3F5637425C5D /* App/RecordingExport.swift */; };
+		A757CEC6BBF994E05E42A541 /* Core/LiveInputCore.c in Sources */ = {isa = PBXBuildFile; fileRef = 307C6502E9895C21321DB750 /* Core/LiveInputCore.c */; };
+		A9A22E50AB19AF8AB9FA3910 /* Tests/BassNoteGateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA038BCC2C368F08EC0602 /* Tests/BassNoteGateTests.swift */; };
+		ABEEDFC08D5AAC3F429D4475 /* App/DebugRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774FBFC5DF3E1442B6FF6C8 /* App/DebugRecorder.swift */; };
+		B066B51081097276B2041149 /* App/BassFretboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD75D263B1D22797961BFECA /* App/BassFretboardView.swift */; };
+		B70D2F1FAED795B3B7353E70 /* App/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C46FC9C6960273B8657C66 /* App/Assets.xcassets */; };
+		B9A1EB49CB7D8E36AEE3BA2B /* App/AudioStreamingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A9E1EE1CB6B70621D988C /* App/AudioStreamingPanel.swift */; };
+		CEFB4312F9DFF802D1C877CF /* App/MusicEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A6643BDAA22E94AA221E5B /* App/MusicEngine.swift */; };
+		CFB4C8C1C0203F63FD8246DE /* Core/DebugCapture.c in Sources */ = {isa = PBXBuildFile; fileRef = D5B917B44D617543F34767AA /* Core/DebugCapture.c */; };
+		D58375A8845DB111A682AF24 /* Core/NoteDisplay.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BACAB6F5EB0AA3AE54DDC36 /* Core/NoteDisplay.c */; };
+		D922DBF5DE57F5C9E3FA5E09 /* App/CirandaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A386FA87DBFB8627DF3286FE /* App/CirandaApp.swift */; };
+		DB70A45A020E83013FA664C3 /* Tests/ScoreHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA07F09DE0B43E35DFE7E8B /* Tests/ScoreHistoryTests.swift */; };
+		E3CB7CDD80097D53B42823FC /* Core/TimingCore.c in Sources */ = {isa = PBXBuildFile; fileRef = B8BCAE7A72AB073396E9825B /* Core/TimingCore.c */; };
+		F72882577CC109728D3BC785 /* Tests/RecordingExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1486BA224F256DFF2C053F /* Tests/RecordingExportTests.swift */; };
+		FBD82B67A76725BA312E3C62 /* App/ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE2F137885EBD3D25F936D /* App/ContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D799BAE6088A90139B415FCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E8A3AD980EC179856012B7E;
+			remoteInfo = Ciranda;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		009E4CFE03812E461624CBBB /* App/ScoreHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/ScoreHistory.swift; sourceTree = "<group>"; };
+		016799D714A2047A55BBF1FA /* Core/RouteTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core/RouteTransition.h; sourceTree = "<group>"; };
+		0BACAB6F5EB0AA3AE54DDC36 /* Core/NoteDisplay.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Core/NoteDisplay.c; sourceTree = "<group>"; };
+		188CB070CF48D86F1784746E /* Tests/TransportMetricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/TransportMetricsTests.swift; sourceTree = "<group>"; };
+		2A95309FCA2645B1C71458B9 /* Core/AudioStreamCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core/AudioStreamCore.h; sourceTree = "<group>"; };
+		307C6502E9895C21321DB750 /* Core/LiveInputCore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Core/LiveInputCore.c; sourceTree = "<group>"; };
+		38420BAFD5EC4815C279A430 /* App/NearbyTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/NearbyTransport.swift; sourceTree = "<group>"; };
+		432B190D342BF7E9ECF99A06 /* Tests/AudioStreamingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/AudioStreamingTests.swift; sourceTree = "<group>"; };
+		4901F001334C3F5637425C5D /* App/RecordingExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/RecordingExport.swift; sourceTree = "<group>"; };
+		4B61BCFBA67A5EB22E557D7D /* Core/NoteDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core/NoteDisplay.h; sourceTree = "<group>"; };
+		4D68A2BF96EFD8EEB49BFB04 /* App/NetworkLANTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/NetworkLANTransport.swift; sourceTree = "<group>"; };
+		4E783A9E10D2A8ABA38CD11C /* Ciranda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Ciranda.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C6DB84F1507A0ECC8876EDA /* Tests/AuthorityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/AuthorityTests.swift; sourceTree = "<group>"; };
+		6C7CCDEB3609F1FAA874E941 /* CirandaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CirandaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DBA038BCC2C368F08EC0602 /* Tests/BassNoteGateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/BassNoteGateTests.swift; sourceTree = "<group>"; };
+		74A6643BDAA22E94AA221E5B /* App/MusicEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/MusicEngine.swift; sourceTree = "<group>"; };
+		760D3AC4DF05199DF19A2044 /* App/Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App/Bridge.h; sourceTree = "<group>"; };
+		768AA1CE2A100C6514B81C85 /* Core/RouteTransition.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Core/RouteTransition.c; sourceTree = "<group>"; };
+		7C2DE0A0556DEE4A1BB71FBF /* Core/TimingCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core/TimingCore.h; sourceTree = "<group>"; };
+		86CA319A719F4D5FEE593A21 /* App/TransportMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/TransportMetrics.swift; sourceTree = "<group>"; };
+		939B61B2A3393576E3A84DF6 /* App/LiveInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/LiveInput.swift; sourceTree = "<group>"; };
+		97769830019D9502A81BB20F /* App/AudioStreaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AudioStreaming.swift; sourceTree = "<group>"; };
+		9D1486BA224F256DFF2C053F /* Tests/RecordingExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/RecordingExportTests.swift; sourceTree = "<group>"; };
+		A18F541CA8BEFB642B478D44 /* App/Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/Models.swift; sourceTree = "<group>"; };
+		A2CDD2B51B9CC7AF9D7B2D55 /* App/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App/Info.plist; sourceTree = "<group>"; };
+		A386FA87DBFB8627DF3286FE /* App/CirandaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/CirandaApp.swift; sourceTree = "<group>"; };
+		A8EE8F0444BDFB7EB0274F22 /* Core/DebugCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core/DebugCapture.h; sourceTree = "<group>"; };
+		ACECE635E338F9F4503A365D /* App/Rodopio.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = App/Rodopio.icon; sourceTree = "<group>"; };
+		B774FBFC5DF3E1442B6FF6C8 /* App/DebugRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/DebugRecorder.swift; sourceTree = "<group>"; };
+		B8BCAE7A72AB073396E9825B /* Core/TimingCore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Core/TimingCore.c; sourceTree = "<group>"; };
+		BE6A9E1EE1CB6B70621D988C /* App/AudioStreamingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/AudioStreamingPanel.swift; sourceTree = "<group>"; };
+		C3389706ACCF0EA6B00CB1DC /* App/ScoreHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/ScoreHistoryView.swift; sourceTree = "<group>"; };
+		CD75D263B1D22797961BFECA /* App/BassFretboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/BassFretboardView.swift; sourceTree = "<group>"; };
+		D5B917B44D617543F34767AA /* Core/DebugCapture.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Core/DebugCapture.c; sourceTree = "<group>"; };
+		DE9BF432BCFC5C14CE185F3E /* Core/AudioStreamCore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Core/AudioStreamCore.c; sourceTree = "<group>"; };
+		DEDE2F137885EBD3D25F936D /* App/ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/ContentView.swift; sourceTree = "<group>"; };
+		E0C46FC9C6960273B8657C66 /* App/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App/Assets.xcassets; sourceTree = "<group>"; };
+		EBA07F09DE0B43E35DFE7E8B /* Tests/ScoreHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/ScoreHistoryTests.swift; sourceTree = "<group>"; };
+		EEC06C96989AD75F126C7445 /* App/RecordingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/RecordingPanel.swift; sourceTree = "<group>"; };
+		FAAA77780FD0A899FF6FE283 /* App/SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/SessionModel.swift; sourceTree = "<group>"; };
+		FC51EEF6CDC2D5D6408BA8E8 /* Core/LiveInputCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core/LiveInputCore.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7561BFB015D8F536760CB671 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E05DB79C430AA1B0BA487AFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64292B1C2B2E13EAD8788FC8 = {
+			isa = PBXGroup;
+			children = (
+				97769830019D9502A81BB20F /* App/AudioStreaming.swift */,
+				BE6A9E1EE1CB6B70621D988C /* App/AudioStreamingPanel.swift */,
+				CD75D263B1D22797961BFECA /* App/BassFretboardView.swift */,
+				A386FA87DBFB8627DF3286FE /* App/CirandaApp.swift */,
+				DEDE2F137885EBD3D25F936D /* App/ContentView.swift */,
+				B774FBFC5DF3E1442B6FF6C8 /* App/DebugRecorder.swift */,
+				939B61B2A3393576E3A84DF6 /* App/LiveInput.swift */,
+				A18F541CA8BEFB642B478D44 /* App/Models.swift */,
+				74A6643BDAA22E94AA221E5B /* App/MusicEngine.swift */,
+				38420BAFD5EC4815C279A430 /* App/NearbyTransport.swift */,
+				4D68A2BF96EFD8EEB49BFB04 /* App/NetworkLANTransport.swift */,
+				4901F001334C3F5637425C5D /* App/RecordingExport.swift */,
+				EEC06C96989AD75F126C7445 /* App/RecordingPanel.swift */,
+				009E4CFE03812E461624CBBB /* App/ScoreHistory.swift */,
+				C3389706ACCF0EA6B00CB1DC /* App/ScoreHistoryView.swift */,
+				FAAA77780FD0A899FF6FE283 /* App/SessionModel.swift */,
+				86CA319A719F4D5FEE593A21 /* App/TransportMetrics.swift */,
+				DE9BF432BCFC5C14CE185F3E /* Core/AudioStreamCore.c */,
+				D5B917B44D617543F34767AA /* Core/DebugCapture.c */,
+				307C6502E9895C21321DB750 /* Core/LiveInputCore.c */,
+				0BACAB6F5EB0AA3AE54DDC36 /* Core/NoteDisplay.c */,
+				768AA1CE2A100C6514B81C85 /* Core/RouteTransition.c */,
+				B8BCAE7A72AB073396E9825B /* Core/TimingCore.c */,
+				432B190D342BF7E9ECF99A06 /* Tests/AudioStreamingTests.swift */,
+				5C6DB84F1507A0ECC8876EDA /* Tests/AuthorityTests.swift */,
+				6DBA038BCC2C368F08EC0602 /* Tests/BassNoteGateTests.swift */,
+				9D1486BA224F256DFF2C053F /* Tests/RecordingExportTests.swift */,
+				EBA07F09DE0B43E35DFE7E8B /* Tests/ScoreHistoryTests.swift */,
+				188CB070CF48D86F1784746E /* Tests/TransportMetricsTests.swift */,
+				760D3AC4DF05199DF19A2044 /* App/Bridge.h */,
+				A8EE8F0444BDFB7EB0274F22 /* Core/DebugCapture.h */,
+				7C2DE0A0556DEE4A1BB71FBF /* Core/TimingCore.h */,
+				016799D714A2047A55BBF1FA /* Core/RouteTransition.h */,
+				2A95309FCA2645B1C71458B9 /* Core/AudioStreamCore.h */,
+				4B61BCFBA67A5EB22E557D7D /* Core/NoteDisplay.h */,
+				FC51EEF6CDC2D5D6408BA8E8 /* Core/LiveInputCore.h */,
+				A2CDD2B51B9CC7AF9D7B2D55 /* App/Info.plist */,
+				E0C46FC9C6960273B8657C66 /* App/Assets.xcassets */,
+				ACECE635E338F9F4503A365D /* App/Rodopio.icon */,
+				FBDC4F23F93125BBEEAE800C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBDC4F23F93125BBEEAE800C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E783A9E10D2A8ABA38CD11C /* Ciranda.app */,
+				6C7CCDEB3609F1FAA874E941 /* CirandaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E8A3AD980EC179856012B7E /* Ciranda */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F37922C48DA5978D02C9E50E /* Build configuration list for PBXNativeTarget "Ciranda" */;
+			buildPhases = (
+				BCE16DD0260827ECF338C787 /* Sources */,
+				7561BFB015D8F536760CB671 /* Frameworks */,
+				0189424A5A60FED329FA868E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ciranda;
+			productName = Ciranda;
+			productReference = 4E783A9E10D2A8ABA38CD11C /* Ciranda.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C062A5A4A7F4F37DD90F54CB /* CirandaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BECB265224D91761C05FDA33 /* Build configuration list for PBXNativeTarget "CirandaTests" */;
+			buildPhases = (
+				77A03FEE20FE96AD9384861E /* Sources */,
+				E05DB79C430AA1B0BA487AFC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE58E2B17C19600779694943 /* PBXTargetDependency */,
+			);
+			name = CirandaTests;
+			productName = CirandaTests;
+			productReference = 6C7CCDEB3609F1FAA874E941 /* CirandaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98F54143AB4E86B28C3AFEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 862894B703A6DEDF96A9DD6C /* Build configuration list for PBXProject "Ciranda" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = pt;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				pt,
+				en,
+				Base,
+			);
+			mainGroup = 64292B1C2B2E13EAD8788FC8;
+			productRefGroup = FBDC4F23F93125BBEEAE800C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E8A3AD980EC179856012B7E /* Ciranda */,
+				C062A5A4A7F4F37DD90F54CB /* CirandaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0189424A5A60FED329FA868E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B70D2F1FAED795B3B7353E70 /* App/Assets.xcassets in Resources */,
+				3F61228DF9AB938AB738ED2D /* App/Rodopio.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77A03FEE20FE96AD9384861E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72095B70885731519371DBC0 /* Tests/AudioStreamingTests.swift in Sources */,
+				464E75F6D2E4B22ADC516462 /* Tests/AuthorityTests.swift in Sources */,
+				A9A22E50AB19AF8AB9FA3910 /* Tests/BassNoteGateTests.swift in Sources */,
+				F72882577CC109728D3BC785 /* Tests/RecordingExportTests.swift in Sources */,
+				DB70A45A020E83013FA664C3 /* Tests/ScoreHistoryTests.swift in Sources */,
+				2E6390C046EC5BFE568F6D86 /* Tests/TransportMetricsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE16DD0260827ECF338C787 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD999589DCEE4B14B38B95F /* App/AudioStreaming.swift in Sources */,
+				B9A1EB49CB7D8E36AEE3BA2B /* App/AudioStreamingPanel.swift in Sources */,
+				B066B51081097276B2041149 /* App/BassFretboardView.swift in Sources */,
+				D922DBF5DE57F5C9E3FA5E09 /* App/CirandaApp.swift in Sources */,
+				FBD82B67A76725BA312E3C62 /* App/ContentView.swift in Sources */,
+				ABEEDFC08D5AAC3F429D4475 /* App/DebugRecorder.swift in Sources */,
+				8B0A065C2B9D42C5F0F83855 /* App/LiveInput.swift in Sources */,
+				42B38D92D65B9FED8753C3E2 /* App/Models.swift in Sources */,
+				CEFB4312F9DFF802D1C877CF /* App/MusicEngine.swift in Sources */,
+				0F8954BC768A62A675B6309A /* App/NearbyTransport.swift in Sources */,
+				271E7DF07223456E5BAA7343 /* App/NetworkLANTransport.swift in Sources */,
+				A548D5A31B99873D35DD64B0 /* App/RecordingExport.swift in Sources */,
+				3208B6585F1CC7842488E70D /* App/RecordingPanel.swift in Sources */,
+				8B5E905F0E0FAD7AE98775DB /* App/ScoreHistory.swift in Sources */,
+				76D097F395EFFB8304637783 /* App/ScoreHistoryView.swift in Sources */,
+				22292E838714C0C2CA32C6F0 /* App/SessionModel.swift in Sources */,
+				8B857CB2F58FF21B43E7D7B0 /* App/TransportMetrics.swift in Sources */,
+				4BA36A1DACB181B00AF3E8CE /* Core/AudioStreamCore.c in Sources */,
+				CFB4C8C1C0203F63FD8246DE /* Core/DebugCapture.c in Sources */,
+				A757CEC6BBF994E05E42A541 /* Core/LiveInputCore.c in Sources */,
+				D58375A8845DB111A682AF24 /* Core/NoteDisplay.c in Sources */,
+				A12BAAF3D900964A933435B8 /* Core/RouteTransition.c in Sources */,
+				E3CB7CDD80097D53B42823FC /* Core/TimingCore.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE58E2B17C19600779694943 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E8A3AD980EC179856012B7E /* Ciranda */;
+			targetProxy = D799BAE6088A90139B415FCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5A8C91857F674E16E2724F47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Rodopio;
+				CURRENT_PROJECT_VERSION = 10;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = FS5N5ZG4WY;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ciranda.prototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_OBJC_BRIDGING_HEADER = App/Bridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		89E1FD6268CC0F221A2BE178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = c11;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		942EEBBACD6C88CAE7F29B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ciranda.prototype.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ciranda.app/Ciranda";
+			};
+			name = Release;
+		};
+		E6DE6C99132752C914FEF632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = c11;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E9B2E96ABC5F6856F2BE79CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = Rodopio;
+				CURRENT_PROJECT_VERSION = 10;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = FS5N5ZG4WY;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ciranda.prototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = App/Bridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCB48D8F88BCDB0ED9FADFD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.ciranda.prototype.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ciranda.app/Ciranda";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		862894B703A6DEDF96A9DD6C /* Build configuration list for PBXProject "Ciranda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89E1FD6268CC0F221A2BE178 /* Debug */,
+				E6DE6C99132752C914FEF632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BECB265224D91761C05FDA33 /* Build configuration list for PBXNativeTarget "CirandaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCB48D8F88BCDB0ED9FADFD7 /* Debug */,
+				942EEBBACD6C88CAE7F29B29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F37922C48DA5978D02C9E50E /* Build configuration list for PBXNativeTarget "Ciranda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9B2E96ABC5F6856F2BE79CF /* Debug */,
+				5A8C91857F674E16E2724F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+}

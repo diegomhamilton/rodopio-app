@@ -1,0 +1,203 @@
+{
+  "fill-specializations": [
+    {
+      "value": {
+        "solid": "srgb:0.025,0.045,0.16,1.00000"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "blur-material": 0.1,
+      "layers": [
+        {
+          "image-name": "01-face-azul-superior.svg",
+          "name": "01-face-azul-superior",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "02-face-azul-central.svg",
+          "name": "02-face-azul-central",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "03-faixa-azul-inferior.svg",
+          "name": "03-faixa-azul-inferior",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "08-triangulo-roxo-ponta.svg",
+          "name": "08-triangulo-roxo-ponta",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "04-verso-roxo-superior.svg",
+          "name": "04-verso-roxo-superior",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "05-verso-roxo-central.svg",
+          "name": "05-verso-roxo-central",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "06-verso-roxo-inferior.svg",
+          "name": "06-verso-roxo-inferior",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "07-fita-coroa.svg",
+          "name": "07-fita-coroa",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "lighting": "individual",
+      "specular": true,
+      "translucency": {
+        "enabled": true,
+        "value": 0.22
+      },
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.35
+      }
+    },
+    {
+      "blur-material": 0.1,
+      "layers": [
+        {
+          "image-name": "10-som-superior-externo.svg",
+          "name": "som-superior-externo",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "11-som-superior-interno.svg",
+          "name": "som-superior-interno",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "12-som-inferior-externo.svg",
+          "name": "som-inferior-externo",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "13-som-inferior-interno.svg",
+          "name": "som-inferior-interno",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "lighting": "individual",
+      "specular": true,
+      "translucency": {
+        "enabled": true,
+        "value": 0.1
+      },
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.2
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": "shared",
+    "circles": [
+      "watchOS"
+    ]
+  }
+}

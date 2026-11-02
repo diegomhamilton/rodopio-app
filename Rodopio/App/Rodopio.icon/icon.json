@@ -1,0 +1,177 @@
+{
+  "fill-specializations": [
+    {
+      "value": {
+        "solid": "srgb:0.025,0.045,0.16,1.00000"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "blur-material": 0.1,
+      "layers": [
+        {
+          "image-name": "01-fita-verso-roxo.svg",
+          "name": "Volta 1 · verso roxo",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "03-fita-verso-roxo.svg",
+          "name": "Volta 2 · verso roxo",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "05-fita-verso-roxo.svg",
+          "name": "Volta 3 · verso roxo",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "02-fita-face-azul.svg",
+          "name": "Volta 1 · face azul",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "04-fita-face-azul.svg",
+          "name": "Volta 2 · face azul",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "06-fita-face-azul.svg",
+          "name": "Volta 3 · face azul",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "lighting": "individual",
+      "specular": true,
+      "translucency": {
+        "enabled": true,
+        "value": 0.22
+      },
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.35
+      }
+    },
+    {
+      "blur-material": 0.1,
+      "layers": [
+        {
+          "image-name": "10-som-superior-externo.svg",
+          "name": "som-superior-externo",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "11-som-superior-interno.svg",
+          "name": "som-superior-interno",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "12-som-inferior-externo.svg",
+          "name": "som-inferior-externo",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        },
+        {
+          "image-name": "13-som-inferior-interno.svg",
+          "name": "som-inferior-interno",
+          "glass": true,
+          "hidden": false,
+          "position": {
+            "scale": 1,
+            "translation-in-points": [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "lighting": "individual",
+      "specular": true,
+      "translucency": {
+        "enabled": true,
+        "value": 0.1
+      },
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.2
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": "shared",
+    "circles": [
+      "watchOS"
+    ]
+  }
+}
