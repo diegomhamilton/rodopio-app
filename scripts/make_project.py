@@ -14,23 +14,28 @@ def arr(items):return '('+','.join(items)+',)' if items else '()'
 sourcefiles=sorted([*root.glob('App/*.swift'),*root.glob('Core/*.c')])
 testfiles=sorted(root.glob('Tests/*.swift'))
 refs=[]; build=[]; testbuild=[]
+group_refs={'App':[], 'Core':[], 'Tests':[], 'Products':[]}
 for path in sourcefiles+testfiles+[root/'App/Bridge.h',*root.glob('Core/*.h'),root/'App/Info.plist']:
     relative=str(path.relative_to(root)); typ={'.swift':'sourcecode.swift','.c':'sourcecode.c.c','.h':'sourcecode.c.h','.plist':'text.plist.xml'}[path.suffix]
-    ref=add(relative, f'isa = PBXFileReference; lastKnownFileType = {typ}; path = {quoted(relative)}; sourceTree = "<group>";')
+    ref=add(relative, f'isa = PBXFileReference; lastKnownFileType = {typ}; path = {quoted(path.name)}; sourceTree = "<group>";')
     refs.append(ref)
+    group_refs[Path(relative).parts[0]].append(ref)
     if path in sourcefiles or path in testfiles:
         b=add('build:'+relative,f'isa = PBXBuildFile; fileRef = {ref};')
         (testbuild if path in testfiles else build).append(b)
 assetref=add('App/Assets.xcassets', 'isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "App/Assets.xcassets"; sourceTree = "<group>";')
-refs.append(assetref)
+refs.append(assetref); group_refs['App'].append(assetref)
 assetbuild=add('build:App/Assets.xcassets', f'isa = PBXBuildFile; fileRef = {assetref};')
 iconref=add('App/Rodopio.icon','isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "App/Rodopio.icon"; sourceTree = "<group>";')
-refs.append(iconref)
+refs.append(iconref); group_refs['App'].append(iconref)
 iconbuild=add('build:App/Rodopio.icon', f'isa = PBXBuildFile; fileRef = {iconref};')
 app=add('app-product','isa = PBXFileReference; explicitFileType = wrapper.application; path = Ciranda.app; sourceTree = BUILT_PRODUCTS_DIR;')
 testproduct=add('test-product','isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CirandaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR;')
 products=add('products',f'isa = PBXGroup; children = {arr([app,testproduct])}; name = Products; sourceTree = "<group>";')
-main=add('group',f'isa = PBXGroup; children = {arr(refs+[products])}; sourceTree = "<group>";')
+appgroup=add('group:App',f'isa = PBXGroup; children = {arr(group_refs["App"])}; path = App; sourceTree = "<group>";')
+coregroup=add('group:Core',f'isa = PBXGroup; children = {arr(group_refs["Core"])}; path = Core; sourceTree = "<group>";')
+testgroup=add('group:Tests',f'isa = PBXGroup; children = {arr(group_refs["Tests"])}; path = Tests; sourceTree = "<group>";')
+main=add('group',f'isa = PBXGroup; children = {arr([appgroup,coregroup,testgroup,products])}; sourceTree = "<group>";')
 def configurations(name,base):
     configs=[]
     for mode in ['Debug','Release']:

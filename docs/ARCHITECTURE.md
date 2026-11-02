@@ -1,3 +1,89 @@
+# Arquitetura do protótipo Rodopio
+
+Este documento descreve o protótipo iOS presente neste repositório. A interface SwiftUI, o motor de áudio e a sessão colaborativa estão implementados em graus diferentes; o projeto Godot é um estudo visual independente. Não há integração Godot–iOS compilada nem serviço de sessão pela internet.
+
+## Mapa de módulos
+
+```mermaid
+flowchart TD
+    UI[SwiftUI\nCirandaApp / ContentView / painéis] --> SM[SessionModel\ncoordenação da sessão]
+    UI --> SH[ScoreHistory\nhistórico local de gestos]
+    SM --> M[Models\nprotocolo musical / autoridade]
+    SM --> CLK[TimingCore C\nrelógio e quantização]
+    SM --> NT[NearbyTransport\ndescoberta próxima]
+    SM --> LAN[NetworkLANTransport\ntransporte IP local]
+    SM --> MET[TransportMetrics\ntelemetria local]
+    SM --> ME[MusicEngine\nagendamento de som]
+    LIVE[LiveInput Swift] --> MIC[LiveInputCore C\nring buffer e análise]
+    LIVE --> ME
+    ME --> OUT[AVAudioEngine / AVAudioSession]
+    MIC --> ME
+    DBG[DebugRecorder / RecordingExport] --> ME
+    GODOT[Godot\nestudo visual separado] -. sinal de nota planejado .-> M
+    T[Tests] --> M
+    T --> CLK
+    T --> MIC
+    T --> ME
+```
+
+## Fluxo de uma contribuição
+
+```mermaid
+sequenceDiagram
+    participant P as Participante
+    participant UI as SwiftUI
+    participant S as SessionModel
+    participant H as Anfitrião/autoridade
+    participant T as Transporte local
+    participant A as MusicEngine
+    P->>UI: toca tecla ou produz nota no baixo
+    UI->>S: ação com nota e timestamp musical
+    S->>H: envia contribuição identificada
+    H->>H: valida, deduplica e escolhe compasso aberto
+    H-->>T: publica ação confirmada/snapshot
+    T-->>S: entrega para participantes
+    S->>A: agenda eventos no relógio musical
+    A-->>P: reproduz nota e metrônomo
+```
+
+O percurso de baixo ao vivo tem duas saídas: monitoração de áudio de baixa latência e análise assíncrona para reconhecer notas. O callback de captura escreve em ring buffer C; a análise não ocorre no callback. Somente eventos musicais, e não o PCM, são enviados pelo protocolo de sessão padrão.
+
+```mermaid
+flowchart LR
+    INPUT[Entrada iOS / USB] --> TAP[Tap AVAudioEngine]
+    TAP --> MON[Monitor local]
+    MON --> OUTPUT[Saída de áudio]
+    TAP --> RING[Ring buffer C lock-free]
+    RING --> ANALYSIS[Análise de nível e pitch]
+    ANALYSIS --> EVENT[Evento de nota]
+    EVENT --> SESSION[SessionModel]
+    SESSION --> ROOM[Participantes na rede local]
+```
+
+## Limites e evolução
+
+```mermaid
+flowchart LR
+    subgraph Hoje[Implementado no protótipo]
+      SW[App SwiftUI] --> SESS[Sessão musical e relógio]
+      SESS --> AUDIO[Áudio local]
+      SESS --> PEER[Salas próximas]
+      INPUT[Teclado e baixo ao vivo] --> SESS
+    end
+    subgraph Estudos[Separado / em validação]
+      G[Estudo Godot 3D]
+      NET[Transporte pela internet]
+      MVP[Campanha cooperativa calma]
+    end
+    G -. integração futura .-> SW
+    NET -. extensão futura .-> SESS
+    MVP -. produto proposto .-> G
+```
+
+Veja também a [proposta de MVP](plan/game-mvp/README.md) e a [documentação do Godot](GODOT.md).
+
+---
+
 # Tempo compartilhado
 
 `SessionAuthority` no anfitrião define época, BPM e compassos. Cada cliente estima offset por quatro timestamps monotônicos e usa a amostra de menor RTT numa janela de 20. A estimativa presume atrasos aproximadamente simétricos; não há garantia sob assimetria. O relógio é amostrado a cada 150 ms durante entrada e a cada 2 s depois. Durante playback a correção é limitada a 0,5 ms por amostra; deriva maior demanda medição e futura política de ressincronização.
